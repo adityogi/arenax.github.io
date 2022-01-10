@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Assets/Images/Python-logo-small.png">
+    <title>Python Keywords and Identifiers | Learn Python</title>
+</head>
+<body>
+	<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+		<div class="container">
+		  <a class="navbar-brand" href="#">
+		  <img src="Assets/Images/python-logo-large.png" alt="logo" width="200" height="60">
+		</a>
+		  <button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navmenu"
+		  >
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+  
+		  <div class="collapse navbar-collapse" id="navmenu">
+			<ul class="navbar-nav ms-auto">
+			  <li class="nav-item">
+				<a href="main.html" class="nav-link">Documentation</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="youtube.html" class="nav-link">Youtube Videos</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+    <h1>Python Keywords and Identifiers</h1>
+		<h2 >Python Keywords</h2>
+		<p>Keywords are the reserved words in Python.</p>
+		<p>
+			We cannot use a keyword as a variable name, function name or any other identifier. 
+			They are used to define the syntax and structure of the Python language.
+		</p>
+
+		<p>In Python, keywords are case sensitive.</p>
+		<p>There are 33 keywords in Python 3.7. This number can vary slightly over the course of time.</p>
+		<p>All the keywords except <code>True</code>, <code>False</code> and <code>None</code> are in lowercase and they must be written as they are. 
+			The list of all the keywords is given below.
+		</p>
+		<div>
+			<table class="table">
+				<tbody>
+				<tr><td><code>False</code></td>
+					<td><code>await</code></td>
+					<td><code>else</code></td>
+					<td><code>import</code></td>
+					<td><code>pass</code></td>
+				</tr><tr><td><code>None</code></td>
+					<td><code>break</code></td>
+					<td><code>except</code></td>
+					<td><code>in</code></td>
+					<td><code>raise</code></td>
+				</tr><tr><td><code>True</code></td>
+					<td><code>class</code></td>
+					<td><code>finally</code></td>
+					<td><code>is</code></td>
+					<td><code>return</code></td>
+				</tr><tr><td><code>and</code></td>
+					<td><code>continue</code></td>
+					<td><code>for</code></td>
+					<td><code>lambda</code></td>
+					<td><code>try</code></td>
+				</tr><tr><td><code>as</code></td>
+					<td><code>def</code></td>
+					<td><code>from</code></td>
+					<td><code>nonlocal</code></td>
+					<td><code>while</code></td>
+				</tr><tr><td><code>assert</code></td>
+					<td><code>del</code></td>
+					<td><code>global</code></td>
+					<td><code>not</code></td>
+					<td><code>with</code></td>
+				</tr><tr><td><code>async</code></td>
+					<td><code>elif</code></td>
+					<td><code>if</code></td>
+					<td><code>or</code></td>
+					<td><code>yield</code></td>
+				</tr></tbody></table>
+		</div>
+		<p>Looking at all the keywords at once and trying to figure out what they mean might be overwhelming.</p>
+		<p>
+			If you want to have an overview, here is the complete 
+			<a href="Assests/Images/List of Keywords in Python.png">list of all the keywords</a> with examples.
+		</p>
+		<hr>
+		<h2>Python Identifiers</h2>
+			<p>
+				An identifier is a name given to entities like class, functions, variables, etc. 
+				It helps to differentiate one entity from another.
+			</p>
+
+		<h3>Rules for writing identifiers</h3>
+
+		<ol>
+			<li>Identifiers can be a combination of letters in lowercase <strong>(a to z)</strong> or uppercase <strong>(A to Z)</strong> or digits <strong>(0 to 9)</strong> or an underscore <code>_</code>. 
+				Names like <code>myClass</code>, <code>var_1</code> and <code>print_this_to_screen</code>, all are valid example.
+			</li>
+			<li>
+				An identifier cannot start with a digit. 
+				<code>1variable</code> is invalid, but <code>variable1</code> is a valid name.
+			</li>
+			<li>
+				Keywords cannot be used as identifiers.
+				<pre style="max-height: 600px;"><code><span>global</span> = <span>1</span></code></pre>
+				<strong>Output</strong>
+
+				<pre>
+					<samp>  File "&lt;interactive input&gt;", line 1
+						global = 1
+							^
+						SyntaxError: invalid syntax
+					</samp>
+				</pre>
+			</li>
+			<li>
+				We cannot use special symbols like <strong>!</strong>, <strong>@</strong>, <strong>#</strong>, <strong>$</strong>, <strong>%</strong> etc. in our identifier.
+				<pre style="max-height: 600px;"><code>a@ = <span>0</span></code></pre>
+				<br>
+				<strong>Output</strong>
+				<pre>
+					<samp>  
+						File "&lt;interactive input&gt;", line 1
+						a@ = 0
+						^	
+						SyntaxError: invalid syntax
+					</samp>
+				s</pre>
+			</li>
+			<li>An identifier can be of any length.</li>
+		</ol>
+
+		<hr>
+		<h3>Things to Remember</h3>
+
+		<p>Python is a case-sensitive language. This means, <code>Variable</code> and <code>variable</code> are not the same.</p>
+
+		<p>Always give the identifiers a name that makes sense. While <code>c = 10</code> is a valid name, writing <code>count = 10</code> would make more sense, and it would be easier to figure out what it represents when you look at your code after a long gap.</p>
+
+		<p>Multiple words can be separated using an underscore, like <code>this_is_a_long_variable</code>.</p>
+		<hr>
+		<br>
+		<hr>
+		<br>
+		<center>
+			<nav aria-label="Page navigation example">
+				<ul class="pagination justify-content-center">
+				<li class="page-item disabled">
+					<a class="page-link" target="_blank">Previous</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="main.html" target="_blank">1</a></li>
+				<li class="page-item"><a class="page-link" href="index.html" target="_blank">2</a></li>
+				<li class="page-item"><a class="page-link" href="statements.html" target="_blank">3</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#" target="_blank">Next</a>
+				</li>
+				</ul>
+			</nav>
+		</center>
+
+
+
+		
+	<!-- Footer -->
+	<footer class="p-5 bg-dark text-white text-center position-relative">
+	<div class="container">
+		<p class="lead">Copyright &copy; 2021 Aditya Agrawal</p>
+
+		<a href="#" class="position-absolute bottom-0 end-0 p-5">
+		<i class="bi bi-arrow-up-circle h1"></i>
+		</a>
+	</div>
+	</footer>
+	<!-- Footer End -->
+</body>
+</html>

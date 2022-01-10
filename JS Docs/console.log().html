@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Assets/Images/Python-logo-small.png">
+    <title>Learn to Code</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/Images/python-logo-large.png" alt="logo" width="200" height="60">
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="Docs/main.html" class="nav-link">Python Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="JS Docs/javascript - console.log().md" class="nav-link">JavaScript Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="youtube.html" class="nav-link">Youtube Videos</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Content -->
+    <div>
+        <h1 id="javascript-consolelog">JavaScript console.log()</h1>
+        <ul>
+            <li>
+                <p>All modern browsers have a web console for debugging</p>
+            </li>
+            <li>
+                <p>The console.log() method is used to write messages to these consoles</p>
+            </li>
+        </ul>
+        <h3 id="example-1-syntax">Example 1: Syntax</h3>
+        <pre>
+            <code>     
+                let message = 44
+                console.log(message);
+                ---------------------
+                Output: 
+                    44
+            </code>
+        </pre>
+        <blockquote>
+        <p>Here, the message refers to  a variable</p>
+        </blockquote>
+        <h3 id="exmple-2-printing-a-sentence">
+            Exmple 2: Printing a Sentence
+        </h3>
+        <pre>
+            <code>     
+                console.log(&quot;String Print&quot;);
+                ---------------------------
+                Output:
+                    Sting Print
+            </code>
+        </pre>
+        <h3 id="example-2-print-values-stored-in-variables">
+            Example 2: Print Values Stored in Variables
+        </h3>
+        <pre>
+            <code>     
+                const greet = &#39;Hello&#39;;
+                const name = &#39;Jack&#39;;
+                console.log(greet + &#39; &#39; + name);
+                -------------
+                Output: 
+                    Hello Jack
+            </code>
+        </pre>
+    </div>
+    <!-- Content End -->
+    <!-- Page Navigation -->
+    <hr>
+    <br>
+    <hr>
+    <br>
+    <center>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" target="_blank">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="main.html" target="_blank">1</a></li>
+                <li class="page-item"><a class="page-link" href="index.html" target="_blank">2</a></li>
+                <li class="page-item"><a class="page-link" href="statements.html" target="_blank">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" target="_blank">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </center>
+    <!-- Page Navigation End -->
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy; 2021 Aditya Agrawal</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    
+</body>
+</html>

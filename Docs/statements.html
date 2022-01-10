@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Assets/Images/Python-logo-small.png">
+    <title>Python Statement, Indentation and Comments</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+		<div class="container">
+		  <a class="navbar-brand" href="#">
+		  <img src="Assets/Images/python-logo-large.png" alt="logo" width="200" height="60">
+		</a>
+		  <button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navmenu"
+		  >
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+  
+		  <div class="collapse navbar-collapse" id="navmenu">
+			<ul class="navbar-nav ms-auto">
+			  <li class="nav-item">
+				<a href="main.html" class="nav-link">Documentation</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="youtube.html" class="nav-link">Youtube Videos</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+    <!-- Navbar End -->
+    <!-- Content Start -->
+    <h1>Python Statement, Indentation and Comments</h1>
+    <p>
+        In this tutorial, you will learn about Python statements, why indentation is important and use of comments in programming.
+    </p>
+    <div>
+    <h2>Python Statement</h2>
+    <p>
+        Instructions that a Python interpreter can execute are called statements. 
+        For example, <code>a = 1</code> is an assignment statement. <code>if</code> statement, <code>for</code> statement, <code>while</code> statement, etc. are other kinds of statements which will be discussed later.
+    </p>
+    <h3>Multi-line statement</h3>
+    <p>
+        In Python, the end of a statement is marked by a newline character. 
+        But we can make a statement extend over multiple lines with the line continuation character (\). 
+        For example:
+    </p>
+    <pre>
+        <code>
+            a = <span>1</span> + <span>2</span> + <span>3</span> + \
+            <span>4</span> + <span  >5</span> + <span  >6</span> + \
+            <span>7</span> + <span>8</span> + <span>9</span>
+        </code>
+    </pre>
+    <p>
+        This is an explicit line continuation. 
+        In Python, line continuation is implied inside parentheses <var>( )</var>, brackets <var>[ ]</var>, and braces <var>{ }</var>. 
+        For instance, we can implement the above multi-line statement as:
+    </p>
+    <pre style="max-height: 600px;">
+        <code>
+            a = (<span  >1</span> + <span  >2</span> + <span  >3</span> +
+            <span  >4</span> + <span  >5</span> + <span  >6</span> +
+            <span  >7</span> + <span  >8</span> + <span  >9</span>)
+        </code>
+    </pre>
+    <p>
+        Here, the surrounding parentheses <var>( )</var> do the line continuation implicitly. 
+        Same is the case with <var>[ ]</var> and <var>{ }</var>. 
+        For example:
+    </p>
+    <pre style="max-height: 600px;">
+        <code>
+            colors = [<span>'red'</span>,
+            <span>'blue'</span>,
+            <span>'green'</span>]
+    </code>
+    </pre>
+    <p>We can also put multiple statements in a single line using semicolons, as follows:</p>
+    <pre style="max-height: 600px;">
+        <code>
+            a = <span  >1</span>; b = <span  >2</span>; c = <span  >3</span>
+        </code>
+    </pre>
+    <hr>
+    <h2>Python Indentation</h2>
+    <p>
+        Most of the programming languages like C, C++, and Java use braces <var>{ }</var> to define a block of code. 
+        Python, however, uses indentation.
+    </p>
+    <p>
+        A code block (body of a <a href="https://www.programiz.com/python-programming/function">function</a>, <a href="https://www.programiz.com/python-programming/for-loop">loop</a>, etc.) starts with indentation and ends with the first unindented line. 
+        The amount of indentation is up to you, but it must be consistent throughout that block.
+    </p>
+    <p>
+        Generally, four whitespaces are used for indentation and are preferred over tabs. 
+        Here is an example.
+    </p>
+    <div>
+        <pre>
+            <code>
+                <span>for</span> i <span>in</span> range(<span  >1</span>,<span  >11</span>):
+                <span>print</span>(i)
+                <span>if</span> i == <span  >5</span>:
+                <span>break</span>
+            </code>
+        </pre>
+    </div>
+    <p>
+        The enforcement of indentation in Python makes the code look neat and clean. 
+        This results in Python programs that look similar and consistent.
+    </p>
+    <p>
+        Indentation can be ignored in line continuation, but it's always a good idea to indent. 
+        It makes the code more readable. 
+        For example:
+    </p>
+    <pre style="max-height: 600px;">
+        <code>
+            <span>if</span> <span >True</span>:
+            <span>print</span>(<span>'Hello'</span>)
+            a = <span  >5</span>
+        </code>
+    </pre>
+    <p>and</p>
+    <pre style="max-height: 600px;">
+        <code>
+            <span>if</span> <span >True</span>: <span>print</span>(<span>'Hello'</span>); a = <span  >5</span>
+        </code>
+    </pre>
+    <p>both are valid and do the same thing, but the former style is clearer.</p>
+    </div>
+    <p>Incorrect indentation will result in <code>IndentationError</code>.</p>
+    <hr>
+    <h2>Python Comments</h2>
+    <p>
+        Comments are very important while writing a program. 
+        They describe what is going on inside a program, so that a person looking at the source code does not have a hard time figuring it out.
+    </p>
+    <p>
+        You might forget the key details of the program you just wrote in a month's time. 
+        So taking the time to explain these concepts in the form of comments is always fruitful.
+    </p>
+    <p>
+        In Python, we use the hash (<strong>#</strong>) symbol to start writing a comment.
+    </p>
+    <p>
+        It extends up to the newline character. 
+        Comments are for programmers to better understand a program. 
+        Python Interpreter ignores comments.
+    </p>
+    <div><div></div><pre style="max-height: 600px;"><code><span>#This is a comment</span>
+    <span>#print out Hello</span>
+    <span>print</span>(<span>'Hello'</span>)</code></pre></div>
+    <hr><h3>Multi-line comments</h3>
+    <p>We can have comments that extend up to multiple lines. One way is to use the hash(<strong>#</strong>) symbol at the beginning of each line. For example:</p>
+    <pre style="max-height: 600px;"><code><span>#This is a long comment</span>
+    <span>#and it extends</span>
+    <span>#to multiple lines</span></code></pre>
+    <p>Another way of doing this is to use triple quotes, either <var>'''</var> or <var>"""</var>.</p>
+    <p>These triple quotes are generally used for multi-line strings. But they can be used as a multi-line comment as well. Unless they are not docstrings, they do not generate any extra code.</p>
+    <pre style="max-height: 600px;"><code><span>"""This is also a
+    perfect example of
+    multi-line comments"""</span></code></pre>
+    <p>To learn more about comments, visit <a href="https://www.programiz.com/python-programming/comments">Python Comments</a>.</p>
+    <hr><h3 id="docstring">Docstrings in Python</h3>
+    <p>A docstring is short for documentation string.</p>
+    <p>Python docstrings (documentation strings) are the <a href="https://www.programiz.com/python-programming/string">string</a> literals that appear right after the definition of a function, method, class, or module.</p>
+    <p>Triple quotes are used while writing docstrings. For example:</p>
+    <pre style="max-height: 600px;"><code><span><span>def</span> <span>double</span><span>(num)</span>:</span>
+    <span>"""Function to double the value"""</span>
+    <span>return</span> <span  >2</span>*num</code></pre>
+    <p>Docstrings appear right after the definition of a function, class, or a module. This separates docstrings from multiline comments using triple quotes.</p>
+    <p>The docstrings are associated with the object as their <code>__doc__</code> attribute.</p>
+    <p>So, we can access the docstrings of the above function with the following lines of code:</p>
+    <div><div></div><pre style="max-height: 600px;"><code><span><span>def</span> <span>double</span><span>(num)</span>:</span>
+    <span>"""Function to double the value"""</span>
+    <span>return</span> <span  >2</span>*num
+    <span>print</span>(double.__doc__)</code></pre></div>
+    <p><strong>Output</strong></p>
+    <pre><samp>Function to double the value</samp></pre>
+    <p>To learn more about docstrings in Python, visit <a href="https://www.programiz.com/python-programming/docstrings">Python Docstrings</a>.</p>
+    </div>
+
+
+    <hr>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- Pagenavigation -->
+    <center>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" target="_blank">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="main.html" target="_blank">1</a></li>
+            <li class="page-item"><a class="page-link" href="index.html" target="_blank">2</a></li>
+            <li class="page-item"><a class="page-link" href="statements.html" target="_blank">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" target="_blank">Next</a>
+            </li>
+            </ul>
+        </nav>
+    </center>
+    <!-- Pagenavigation End -->
+	
+    
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+    <div class="container">
+        <p class="lead">Copyright &copy; 2021 Aditya Agrawal</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+    </div>
+    </footer>
+    <!-- Footer End -->
+</body>
+</html>

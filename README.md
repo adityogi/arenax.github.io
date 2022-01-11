@@ -4,4 +4,4 @@ Copyright (c) 2022 Aditya Agrawal (adityogi)
 
 View the static website here: <https://adityogi.github.io/arenax.github.io/index.html>
 
-View license here: <>
+View license here: <https://adityogi.github.io/arenax.github.io/LICENSE>

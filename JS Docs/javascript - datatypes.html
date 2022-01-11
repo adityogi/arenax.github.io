@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>javascript - datatypes.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+  <!-- Navbar -->
+	<nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="https://adityogi.github.io/arenax.github.io/">
+			<img src="Assets/javascript-js-seeklogo.com.svg" alt="logo" width="200" height="60">
+			</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navmenu"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a href="consolelog.html" class="nav-link">JavaScript Documentation</a>
+				</li>
+				<li class="nav-item">
+					<a href="https://adityogi.github.io/arenax.github.io/" class="nav-link">Back to Home</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Navbar End -->
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<h1 id="javascript-data-types">JavaScript Data Types</h1>
+	<ol>
+	<li>There are eight basic types of data types in JavaScript.</li>
+	</ol>
+	<ul>
+	<li>
+	<p>They are:</p>
+	<ol>
+	<li>String</li>
+	<li>Number</li>
+	<li>BigInt</li>
+	<li>Boolean</li>
+	<li>undefined</li>
+	<li>null</li>
+	<li>Symbol</li>
+	<li>Object</li>
+	</ol>
+	</li>
+	</ul>
+	<blockquote>
+	<blockquote>
+	<p>Note: The Object data type (non-primitive type) can store collections of data, whereas primitive data type can only store a single data.</p>
+	</blockquote>
+	</blockquote>
+	<hr>
+	<h2 id="javascript-strings">JavaScript Strings</h2>
+	<p><strong>String</strong> is used to store text.
+	In JavaScript, strings are surrounded by quotes:</p>
+	<blockquote>
+	<ul>
+	<li>Single quotes: 'Hello'</li>
+	<li>Double quotes: &quot;Hello&quot;</li>
+	<li>Backticks: <code>Hello</code></li>
+	</ul>
+	</blockquote>
+	<p>Example:</p>
+	<pre class="hljs"><code><div>     const name = 'ram';
+		const name1 = &quot;hari&quot;;
+		const result = `The names are ${name} and ${name1};
+	</div></code></pre>
+	<ul>
+	<li>
+	<p>Single quotes and double quotes are practically the same and you can use either of them.</p>
+	</li>
+	<li>
+	<p>Backticks are generally used when you need to include variables or expressions into a string.</p>
+	</li>
+	<li>
+	<p>This is done by wrapping variables or expressions with <strong><code>${variable or expression}</code></strong> as shown above.</p>
+	</li>
+	</ul>
+	<hr>
+	<h2 id="javascript-number">JavaScript Number</h2>
+	<p><strong><code>Number</code></strong> represents integer and floating numbers (decimals and exponentials).<br>
+	Example:</p>
+	<pre class="hljs"><code><div>     const number1 = 3;
+		const number2 = 3.433;
+		const number3 = 3e5 // 3 * 10^5
+	</div></code></pre>
+	<blockquote>
+	<p>A number type can also be</p>
+	</blockquote>
+	<ol>
+	<li><strong>+Infinity</strong></li>
+	<li><strong>-Infinity</strong></li>
+	<li><strong>NaN (not a number)</strong><br>
+	Example 1:</li>
+	</ol>
+	<pre class="hljs"><code><div>     const number1 = 3/0;
+		console.log(number1); // Infinity
+
+		const number2 = -3/0;
+		console.log(number2); // -Infinity
+
+		// strings can't be divided by numbers
+		const number3 = &quot;abc&quot;/3;
+		console.log(number3);  // NaN
+	</div></code></pre>
+	<hr>
+	<h2 id="javascript-bigint">JavaScript BigInt</h2>
+	<ul>
+	<li>In JavaScript, Number type can only represent numbers less than (253 - 1) and more than -(253 - 1).</li>
+	<li>However, if you need to use a larger number than that, you can use the <code>BigInt</code> data type.<br>
+	Example 1:</li>
+	</ul>
+	<pre class="hljs"><code><div>     // BigInt value
+		const value1 = 900719925124740998n;
+
+		// Adding two big integers
+		const result1 = value1 + 1n;
+		console.log(result1); // &quot;900719925124740999n&quot;
+
+		const value2 = 900719925124740998n;
+
+		// Error! BitInt and number cannot be added
+		const result2 = value2 + 1;
+		console.log(result2);
+	</div></code></pre>
+	<p>Output</p>
+	<pre class="hljs"><code><div>     900719925124740999n
+		Uncaught TypeError: Cannot mix BigInt and other types
+	</div></code></pre>
+	<blockquote>
+	<blockquote>
+	<p>Note: BigInt was introduced in the newer version of JavaScript and is not supported by many browsers including Safari.<br>
+	Visit JavaScript BigInt support to learn more.</p>
+	</blockquote>
+	</blockquote>
+	<hr>
+	<h2 id="javascript-boolean">JavaScript Boolean</h2>
+	<ul>
+	<li>This data type represents logical entities.</li>
+	<li>Boolean represents one of two values: <strong><code>true</code></strong> or <strong><code>false</code></strong>.</li>
+	<li>It is easier to think of it as a yes/no switch.</li>
+	</ul>
+	<p>Example 1:</p>
+	<pre class="hljs"><code><div>
+		const dataChecked = true;
+		const valueCounted = false;
+
+	</div></code></pre>
+	<hr>
+	<h2 id="javascript-undefined">JavaScript undefined</h2>
+	<ul>
+	<li>The <code>undefined</code> data type represents <strong>value that is not assigned</strong>.</li>
+	<li>If a variable is declared but the value is not assigned, then the value of that variable will be <code>undefined</code>.</li>
+	</ul>
+	<p>Example 1:</p>
+	<pre class="hljs"><code><div>     let name;
+		console.log(name); // undefined
+	</div></code></pre>
+	<ul>
+	<li>It is also possible to explicitly assign a variable value undefined.</li>
+	</ul>
+	<p>Example 2:</p>
+	<pre class="hljs"><code><div>     let name = undefined;
+		console.log(name); // undefined
+	</div></code></pre>
+	<blockquote>
+	<blockquote>
+	<p>Note: It is recommended not to explicitly assign <code>undefined</code> to a variable.<br>
+	Usually, <code>null</code> is used to assign 'unknown' or 'empty' value to a variable.</p>
+	</blockquote>
+	</blockquote>
+	<hr>
+	<h2 id="javascript-null">JavaScript null</h2>
+	<p>In JavaScript, <code>null</code> is a special value that represents <strong>empty</strong> or <strong>unknown</strong> value.</p>
+	<p>Example 1:</p>
+	<pre class="hljs"><code><div>     const number = null;
+	</div></code></pre>
+	<p>The code above suggests that the number variable is empty.</p>
+	<blockquote>
+	<blockquote>
+	<p>Note: <code>null</code> is not the same as <strong>NULL or Null</strong>.</p>
+	</blockquote>
+	</blockquote>
+	<hr>
+	<h2 id="javascript-symbol">JavaScript Symbol</h2>
+	<ul>
+	<li>
+	<p>This data type was introduced in a newer version of JavaScript (from ES2015).</p>
+	</li>
+	<li>
+	<p>A value having the data type Symbol can be referred to as a <strong>symbol value</strong> can be referred to as a <strong>symbol value</strong>.</p>
+	</li>
+	<li>
+	<p><code>Symbol</code> is an immutable primitive value that is unique.</p>
+	</li>
+	<li>
+	<p>For example:</p>
+	</li>
+	</ul>
+	<pre class="hljs"><code><div>// two symbols with the same description
+
+	const value1 = Symbol('hello');
+	const value2 = Symbol('hello');
+	</div></code></pre>
+	<ul>
+	<li>
+	<p>Though value1 and value2 both contain 'hello', they are different as they are of the Symbol type.</p>
+	</li>
+	<li>
+	<p>Visit JavaScript Symbol -- <a href="https://www.programiz.com/javascript/symbol">https://www.programiz.com/javascript/symbol</a> to learn more.</p>
+	</li>
+	</ul>
+	<h2 id="javascript-object">JavaScript Object</h2>
+	<ol>
+	<li>An object is a complex data type that allows us to store collections of data.</li>
+	<li>For example:</li>
+	</ol>
+	<pre class="hljs"><code><div>     const student = {
+		firstName: 'ram',
+		lastName: null,
+		class: 10
+		};
+	</div></code></pre>
+	<ul>
+	<li>You will learn about JavaScript Objects -- <a href="https://www.programiz.com/javascript/object">https://www.programiz.com/javascript/object</a> in later tutorials.</li>
+	</ul>
+	<h2 id="javascript-type">JavaScript Type</h2>
+	<ul>
+	<li>
+	<p>JavaScript is a dynamically typed (loosely typed) language. JavaScript automatically determines the variables' data type for you.</p>
+	</li>
+	<li>
+	<p>It also means that a variable can be of one data type and later it can be changed to another data type.</p>
+	</li>
+	<li>
+	<p>For example:</p>
+	</li>
+	</ul>
+	<pre class="hljs"><code><div>     // data is of undefined type
+		let data;
+
+		// data is of integer type
+		data = 5;
+
+		// data is of string type
+		data = &quot;JavaScript Programming&quot;;
+	</div></code></pre>
+	<h2 id="javascript-typeof">JavaScript typeof</h2>
+	<ul>
+	<li>To find the type of a variable, you can use the typeof operator. For example,</li>
+	</ul>
+	<p>const name = 'ram';
+	typeof(name); // returns &quot;string&quot;</p>
+	<pre class="hljs"><code><div>     const number = 4;
+		typeof(number); //returns &quot;number&quot;
+
+		const valueChecked = true;
+		typeof(valueChecked); //returns &quot;boolean&quot;
+
+		const a = null;
+		typeof(a); // returns &quot;object&quot;
+	</div></code></pre>
+	<blockquote>
+	<p>Notice that typeof returned &quot;object&quot; for the null type. This is a known issue in JavaScript since its first release.</p>
+	</blockquote>
+	<hr>
+	<br>
+	<hr>
+	<br>
+	<!-- Page Navigation -->
+	<center>
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-center">
+			<li class="page-item disabled">
+				<a class="page-link" target="_blank">Previous</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="consolelog.html" target="_blank">1</a></li>
+			<li class="page-item"><a class="page-link" href="#" target="_blank">2</a></li>
+			<li class="page-item"><a class="page-link" href="#" target="_blank">3</a></li>
+			<li class="page-item"><a class="page-link" href="#" target="_blank">4</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#" target="_blank">Next</a>
+			</li>
+			</ul>
+		</nav>
+	</center>
+
+
+	<!-- Footer -->
+	<footer class="p-5 bg-dark text-white text-center position-relative">
+	<div class="container">
+		<p class="lead">Copyright &copy; 2021 Aditya Agrawal</p>
+		<a href="#" class="position-absolute bottom-0 end-0 p-5">
+		<i class="bi bi-arrow-up-circle h1"></i>
+		</a>
+	</div>
+	</footer>
+	<!-- Footer End -->
+
+</body>
+</html>

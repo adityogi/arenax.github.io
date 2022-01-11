@@ -43,11 +43,11 @@ Example:
      const number2 = 3.433;
      const number3 = 3e5 // 3 * 10^5
 ```
-> A number type can also be 
+> A number type can also be
 1. **+Infinity**
 2. **-Infinity**
 3. **NaN (not a number)**\
-Example 1: 
+Example 1:
 ```
      const number1 = 3/0;
      console.log(number1); // Infinity
@@ -56,7 +56,7 @@ Example 1:
      console.log(number2); // -Infinity
 
      // strings can't be divided by numbers
-     const number3 = "abc"/3; 
+     const number3 = "abc"/3;
      console.log(number3);  // NaN
 ```
 -----------------------
@@ -76,8 +76,8 @@ Example 1:
      const value2 = 900719925124740998n;
 
      // Error! BitInt and number cannot be added
-     const result2 = value2 + 1; 
-     console.log(result2); 
+     const result2 = value2 + 1;
+     console.log(result2);
 ```
 Output
 ```
@@ -88,7 +88,7 @@ Output
 Visit JavaScript BigInt support to learn more.
 -----------------------
 ## JavaScript Boolean ##
-- This data type represents logical entities. 
+- This data type represents logical entities.
 - Boolean represents one of two values: **`true`** or **`false`**.
 - It is easier to think of it as a yes/no switch.
 
@@ -97,7 +97,7 @@ Example 1:
 
      const dataChecked = true;
      const valueCounted = false;
-     
+
 ```
 -----------------------
 ## JavaScript undefined ##
@@ -139,4 +139,73 @@ The code above suggests that the number variable is empty.
 ## JavaScript Symbol ##
 
 - This data type was introduced in a newer version of JavaScript (from ES2015).
-- A value having the data type Symbol can be referred to as a **symbol value**.
+
+- A value having the data type Symbol can be referred to as a **symbol value** can be referred to as a **symbol value**.
+
+- `Symbol` is an immutable primitive value that is unique.
+
+- For example:
+
+```
+// two symbols with the same description
+
+const value1 = Symbol('hello');
+const value2 = Symbol('hello');
+```
+
+* Though value1 and value2 both contain 'hello', they are different as they are of the Symbol type.
+
+* Visit JavaScript Symbol -- <https://www.programiz.com/javascript/symbol> to learn more.
+
+## JavaScript Object ##
+
+1. An object is a complex data type that allows us to store collections of data. 
+2. For example:
+
+```
+     const student = {
+    firstName: 'ram',
+    lastName: null,
+    class: 10
+     };
+```
+
+* You will learn about JavaScript Objects -- <https://www.programiz.com/javascript/object> in later tutorials.
+
+## JavaScript Type ##
+
+- JavaScript is a dynamically typed (loosely typed) language. JavaScript automatically determines the variables' data type for you.
+
+- It also means that a variable can be of one data type and later it can be changed to another data type. 
+- For example:
+
+```
+     // data is of undefined type
+     let data;
+
+     // data is of integer type
+     data = 5;
+
+     // data is of string type
+     data = "JavaScript Programming";
+```
+
+## JavaScript typeof ##
+
+* To find the type of a variable, you can use the typeof operator. For example,
+
+const name = 'ram';
+typeof(name); // returns "string"
+```
+     const number = 4;
+     typeof(number); //returns "number"
+
+     const valueChecked = true;
+     typeof(valueChecked); //returns "boolean"
+
+     const a = null;
+     typeof(a); // returns "object"
+```
+
+
+> Notice that typeof returned "object" for the null type. This is a known issue in JavaScript since its first release.

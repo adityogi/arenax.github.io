@@ -6,150 +6,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-     
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
     <link
-     
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
-     
     />
     <link href="style.css" />
     <link rel="icon" type="image/x-icon" href="Assets/Images/Python-logo-small.png">
     <title>Python Keywords and Identifiers | Learn Python</title>
 </head>
 <body>
-    <h1>Python Variables, Constants and Literals</h1> 
+    <h1>Python Variables, Constants and Literals</h1>
     <p>In this tutorial, you will learn about Python variables, constants, literals and their use cases.</p>
-      <h2>Python Variables</h2>
-<p>A variable is a named location used to store data in the memory. It is helpful to think of variables as a container that holds data that can be changed later in the program. For example,</p>
-<pre><code>number = <span>10</span>
-</code></pre>
-<p>Here, we have created a variable named <var>number</var>. We have assigned the value <samp>10</samp> to the variable.</p>
-<p>You can think of variables as a bag to store books in it and that book can be replaced at any time.</p>
-<pre><code>number = <span>10</span>
-number = <span>1.1</span>
-</code></pre>
-<p>Initially, the value of <var>number</var> was <samp>10</samp>. Later, it was changed to <samp>1.1</samp>.</p>
-<p class="note-tip"><strong>Note</strong>: In Python, we don't actually assign values to the variables. Instead, Python gives the reference of the object(value) to the variable.</p>
-<hr><h2 id="value-variable">Assigning values to Variables in Python</h2>
-<p>As you can see from the above example, you can use the assignment operator <code>=</code> to assign a value to a variable.</p>
-<h3>Example 1: Declaring and assigning value to a variable</h3>
-<div><div></div><pre><code>website = <span>"apple.com"</span>
-<span>print</span>(website)
-</code></pre></div>
-<p><strong>Output</strong></p>
-<pre><samp>apple.com
-</samp></pre>
-<p>In the above program, we assigned a value <samp>apple.com</samp> to the variable <var>website</var>. Then, we printed out the value assigned to <var>website</var> i.e.&nbsp;<samp>apple.com</samp></p>
-<p class="note-tip"><strong>Note</strong>: Python is a <a href="https://en.wikipedia.org/wiki/Type_inference">type-inferred</a> language, so you don't have to explicitly define the variable type. It automatically knows that <samp>apple.com</samp> is a string and declares the <var>website</var> variable as a string.</p>
-<hr><h3>Example 2: Changing the value of a variable</h3>
-<div><div></div><pre><code>website = <span>"apple.com"</span>
-<span>print</span>(website)
-<span># assigning a new value to website</span>
-website = <span>"programiz.com"</span>
-<span>print</span>(website)
-</code></pre></div>
-<p><strong>Output</strong></p>
-<pre><samp>apple.com
-programiz.com
-</samp></pre>
-<p>In the above program, we have assigned <samp>apple.com</samp>&nbsp;to the <var>website</var> variable initially. Then, the value is changed to <samp>programiz.com</samp>.</p>
-<hr><h3>Example 3: Assigning multiple values to multiple variables</h3>
-<div><div></div><pre><code>a, b, c = <span>5</span>, <span>3.2</span>, <span>"Hello"</span>
-<span>print</span> (a)
-<span>print</span> (b)
-<span>print</span> (c)
-</code></pre></div>
-<p>If we want to assign the same value to multiple variables at once, we can do this as:</p>
-<div><div></div><pre><code>x = y = z = <span>"same"</span>
-<span>print</span> (x)
-<span>print</span> (y)
-<span>print</span> (z)
-</code></pre></div>
-<p>The second program assigns the <samp>same</samp> string to all the three variables <var>x</var>, <var>y</var> and <var>z</var>.</p>
-<hr><h2 id="constants">Constants</h2>
-<p>A constant is a type of variable whose value cannot be changed. It is helpful to think of constants as containers that hold information which cannot be changed later.</p>
-<p>You can think of constants as a bag to store some books which cannot be replaced once placed inside the bag.</p>
-<hr><h2 id="value-constant">Assigning value to constant in Python</h2>
-<p>In Python, constants are usually declared and assigned in a module. Here, the module is a new file containing variables, functions, etc which is imported to the main file. Inside the module, constants are written in all capital letters and underscores separating the words.</p>
-<h3>Example 3: Declaring and assigning value to a constant</h3>
-<p>Create a <strong>constant.py</strong>:</p>
-<pre><code>PI = <span>3.14</span>
-GRAVITY = <span>9.8</span>
-</code></pre>
-<p>Create a <strong>main.py</strong>:</p>
-<pre><code><span>import</span> constant
-<span>print</span>(constant.PI)
-<span>print</span>(constant.GRAVITY)
-</code></pre>
-<p><strong>Output</strong></p>
-<pre><samp>3.14
-9.8
-</samp></pre>
-<p>In the above program, we create a <strong>constant.py</strong> module file. Then, we assign the constant value to <var>PI</var> and <var>GRAVITY</var>. After that, we create a <strong>main.py</strong> file and import the <code>constant</code> module. Finally, we print the constant value.</p>
-<p class="note-tip"><strong>Note</strong>: In reality, we don't use constants in Python. Naming them in all capital letters is a convention to separate them from variables, however, it does not actually prevent reassignment.</p>
-<hr><h2 id="rules-naming-convention">Rules and Naming Convention for Variables and constants</h2>
-<ol><li>Constant and variable names should have a combination of letters in lowercase (a to z) or uppercase (<strong>A to Z</strong>) or digits (<strong>0 to 9</strong>) or an underscore (<strong>_</strong>). For example:
-		<pre>snake_case
-MACRO_CASE
-camelCase
-CapWords</pre>
-	</li>
-	<li>Create a name that makes sense. For example,&nbsp;<var>vowel</var> makes more sense than <var>v</var>.</li>
-	<li>If you want to create a variable name having two words, use underscore to separate them.&nbsp;For example:
-		<pre>my_name
-current_salary</pre>
-	</li>
-	<li>Use capital letters possible to declare a constant. For example:
-		<pre>PI
-G
-MASS
-SPEED_OF_LIGHT
-TEMP</pre>
-	</li>
-	<li>Never use special symbols like !, @, #, $, %, etc.</li>
-	<li>Don't start a variable name with a digit.</li>
-</ol><hr><h2 id="literals">Literals</h2>
-<p>Literal is a raw data given in a variable or constant. In Python, there are various types of literals they are as follows:</p>
-<h2 id="numeric-literals">Numeric Literals</h2>
-<p>Numeric Literals are immutable (unchangeable). Numeric literals can belong to 3 different numerical types: <code>Integer</code>, <code>Float</code>, and <code>Complex</code>.</p>
-<h3>Example 4: How to use Numeric literals in Python?</h3>
-<div><div></div><pre><code>a = <span>0b1010</span> <span>#Binary Literals</span>
-b = <span>100</span> <span>#Decimal Literal </span>
-c = <span>0o310</span> <span>#Octal Literal</span>
-d = <span>0x12c</span> <span>#Hexadecimal Literal</span>
-<span>#Float Literal</span>
-float_1 = <span>10.5</span> 
-float_2 = <span>1.5e2</span>
-<span>#Complex Literal </span>
-x = <span>3.14j</span>
-<span>print</span>(a, b, c, d)
-<span>print</span>(float_1, float_2)
-<span>print</span>(x, x.imag, x.real)
-</code></pre></div>
-<p></p><div id="block-inject-1" class="block-inject block-inject-1">
-    
-    
-    
+    <h2>Python Variables</h2>
+    <p>A variable is a named location used to store data in the memory. It is helpful to think of variables as a container that holds data that can be changed later in the program. For example,</p>
+    <pre>
+      <code>
+        number = <span>10</span>
+      </code>
+    </pre>
+    <p>Here, we have created a variable named <var>number</var>. We have assigned the value <samp>10</samp> to the variable.</p>
+    <p>You can think of variables as a bag to store books in it and that book can be replaced at any time.</p>
+    <pre>
+      <code>
+        number = <span>10</span>
+      number = <span>1.1</span>
+      </code>
+    </pre>
+    <p>Initially, the value of <var>number</var> was <samp>10</samp>. Later, it was changed to <samp>1.1</samp>.</p>
+    <p class="note-tip">
+      <strong>Note</strong>: In Python, we don't actually assign values to the variables. Instead, Python gives the reference of the object(value) to the variable.
+    </p>
+    <hr>
+    <h2 id="value-variable">Assigning values to Variables in Python</h2>
+    <p>
+      As you can see from the above example, you can use the assignment operator <code>=</code> to assign a value to a variable.
+    </p>
+  <h3>Example 1: Declaring and assigning value to a variable</h3>
+  <div>
+    <pre>
+      <code>website = <span>"testpython.com"</span>
+      <span>print</span>(website)
+      </code>
+    </pre>
+  </div>
+  <p><strong>Output</strong></p>
+  <pre>
+    <samp>apple.com</samp>
+  </pre>
+  <p>In the above program, we assigned a value <samp>apple.com</samp> to the variable <var>website</var>. Then, we printed out the value assigned to <var>website</var> i.e.&nbsp;<samp>apple.com</samp></p>
+  <p class="note-tip"><strong>Note</strong>: Python is a <a href="https://en.wikipedia.org/wiki/Type_inference">type-inferred</a> language, so you don't have to explicitly define the variable type. It automatically knows that <samp>apple.com</samp> is a string and declares the <var>website</var> variable as a string.</p>
+  <hr>
+  <h3>Example 2: Changing the value of a variable</h3>
+  <div>
+    <div></div>
+    <pre>
+      <code>website = <span>"apple.com"</span>
+    <span>print</span>(website)
+    <span># assigning a new value to website</span>
+    website = <span>"programiz.com"</span>
+    <span>print</span>(website)
+      </code>
+    </pre>
+  </div>
+  <p><strong>Output</strong></p>
+  <pre>
+    <samp>apple.com
+      programiz.com
+    </samp>
+  </pre>
+  <p>In the above program, we have assigned <samp>apple.com</samp>&nbsp;to the <var>website</var> variable initially. Then, the value is changed to <samp>programiz.com</samp>.</p>
+  <hr>
+  <h3>Example 3: Assigning multiple values to multiple variables</h3>
+  <div>
+    <div></div>
+    <pre>
+      <code>
+        a, b, c = <span>5</span>, <span>3.2</span>, <span>"Hello"</span>
+        <span>print</span> (a)
+        <span>print</span> (b)
+        <span>print</span> (c)
+      </code>
+    </pre>
+  </div>
+  <p>If we want to assign the same value to multiple variables at once, we can do this as:</p>
+  <div>
+    <div></div>
+    <pre>
+      <code>
+        x = y = z = <span>"same"</span>
+        <span>print</span> (x)
+        <span>print</span> (y)
+        <span>print</span> (z)
+      </code>
+    </pre>
+  </div>
+  <p>The second program assigns the <samp>same</samp> string to all the three variables <var>x</var>, <var>y</var> and <var>z</var>.</p>
+  <hr>
+  <h2 id="constants">Constants</h2>
+  <p>A constant is a type of variable whose value cannot be changed. It is helpful to think of constants as containers that hold information which cannot be changed later.</p>
+  <p>You can think of constants as a bag to store some books which cannot be replaced once placed inside the bag.</p>
+  <hr>
+  <h2 id="value-constant">Assigning value to constant in Python</h2>
+  <p>In Python, constants are usually declared and assigned in a module. Here, the module is a new file containing variables, functions, etc which is imported to the main file. Inside the module, constants are written in all capital letters and underscores separating the words.</p>
+  <h3>Example 3: Declaring and assigning value to a constant</h3>
+  <p>Create a <strong>constant.py</strong>:</p>
+  <pre>
+    <code>
+      PI = <span>3.14</span>
+      GRAVITY = <span>9.8</span>
+    </code>
+  </pre>
+  <p>Create a <strong>main.py</strong>:</p>
+  <pre>
+    <code>
+      <span>import</span> constant
+      <span>print</span>(constant.PI)
+      <span>print</span>(constant.GRAVITY)
+    </code>
+  </pre>
+  <p><strong>Output</strong></p>
+  <pre>
+    <samp>
+      3.14
+      9.8
+    </samp>
+  </pre>
+  <p>In the above program, we create a <strong>constant.py</strong> module file. Then, we assign the constant value to <var>PI</var> and <var>GRAVITY</var>. After that, we create a <strong>main.py</strong> file and import the <code>constant</code> module. Finally, we print the constant value.</p>
+  <p class="note-tip">
+    <strong>Note</strong>: In reality, we don't use constants in Python. Naming them in all capital letters is a convention to separate them from variables, however, it does not actually prevent reassignment.
+  </p>
+  <hr>
+  <h2 id="rules-naming-convention">
+    Rules and Naming Convention for Variables and constants
+  </h2>
+  <ol>
+    <li>
+      Constant and variable names should have a combination of letters in lowercase (a to z) or uppercase (<strong>A to Z</strong>) or digits (<strong>0 to 9</strong>) or an underscore (<strong>_</strong>). 
+      For example:
+      <pre>
+        snake_case
+        MACRO_CASE
+        camelCase
+        CapWords
+      </pre>
+	  </li>
+	  <li>Create a name that makes sense. For example,&nbsp;<var>vowel</var> makes more sense than <var>v</var>.</li>
+	  <li>
+      If you want to create a variable name having two words, use underscore to separate them.&nbsp;For example:
+		<pre>
+      my_name
+      current_salary
+    </pre>
+    </li>
+	  <li>
+      Use capital letters possible to declare a constant. For example:
+      <pre>
+        PI
+        G
+        MASS
+        SPEED_OF_LIGHT
+        TEMP
+      </pre>
+	  </li>
+	  <li>Never use special symbols like !, @, #, $, %, etc.</li>
+    <li>Don't start a variable name with a digit.</li>
+    </ol>
+    <hr>
+    <h2 id="literals">Literals</h2>
+    <p>Literal is a raw data given in a variable or constant. In Python, there are various types of literals they are as follows:</p>
+    <h2 id="numeric-literals">Numeric Literals</h2>
+    <p>Numeric Literals are immutable (unchangeable). Numeric literals can belong to 3 different numerical types: <code>Integer</code>, <code>Float</code>, and <code>Complex</code>.</p>
+    <h3>Example 4: How to use Numeric literals in Python?</h3>
+    <div>
+      <div></div>
+      <pre>
+        <code>
+          a = <span>0b1010</span>
+          <span>#Binary Literals</span>
+          b = <span>100</span> <span>#Decimal Literal </span>
+          c = <span>0o310</span> <span>#Octal Literal</span>
+          d = <span>0x12c</span> <span>#Hexadecimal Literal</span>
+          <span>#Float Literal</span>
+          float_1 = <span>10.5</span> 
+          float_2 = <span>1.5e2</span>
+          <span>#Complex Literal </span>
+          x = <span>3.14j</span>
+          <span>print</span>(a, b, c, d)
+          <span>print</span>(float_1, float_2)
+          <span>print</span>(x, x.imag, x.real)
+        </code>
+      </pre>
+    </div>
+    <p></p>
+    <div id="block-inject-1" class="block-inject block-inject-1">
+
     <style>
     #div-gpt-ad-Programizcom37046 {display:none; width: 728px; height: 90px; }
     #div-gpt-ad-Programizcom36796 {display: block;}
     @media(min-width: 992px) { #div-gpt-ad-Programizcom37046 {display: block;} #div-gpt-ad-Programizcom36796 {display: none;}}
-    </style><div id="div-gpt-ad-Programizcom37046" style="margin: 32px 0;">
+    </style>
+
+    <div id="div-gpt-ad-Programizcom37046" style="margin: 32px 0;">
     </div>
-    
     <div id="div-gpt-ad-Programizcom36796" style="margin: 32px 0; min-height: 250px;">
     </div>
-    </div><div class="clearfix"></div><p><strong>Output</strong></p>
-<pre><samp>10 100 200 300
-10.5 150.0
-3.14j 3.14 0.0
-</samp></pre>
+    </div>
+    <div class="clearfix"></div>
+    <p><strong>Output</strong></p>
+    <pre>
+      <samp>10 100 200 300
+      10.5 150.0
+      3.14j 3.14 0.0
+      </samp>
+    </pre>
 <p>In the above program,</p>
 <ul><li>We assigned integer literals into different variables. Here, <var>a</var> is binary literal, <var>b</var> is a decimal literal, <var>c</var> is an octal literal and <var>d</var> is a hexadecimal literal.</li>
 	<li>When we print the variables, all the literals are converted into decimal values.</li>

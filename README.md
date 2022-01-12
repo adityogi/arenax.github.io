@@ -14,3 +14,6 @@ View license here: <https://adityogi.github.io/arenax.github.io/LICENSE>
 * Bootstrap 5
 
 > This page in hosted by GitHub
+> Learning content from Programiz
+> CSS from templatemo
+> Use of Bootstap 5 used to create website.

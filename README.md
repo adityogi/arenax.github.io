@@ -1,4 +1,10 @@
-# Welcome to Arena X
+# Arena X Documentation
+
+## Table of Contents
+
+* Learn Python
+* Learn JavaScript
+* About Us
 
 Copyright (c) 2022 Aditya Agrawal (adityogi)
 

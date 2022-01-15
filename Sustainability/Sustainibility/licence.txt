@@ -4,8 +4,8 @@
 Template Name: Sustainibility
 File: Licence
 Author: OS Templates
-Author URI: https://www.os-templates.com/
-Licence URI: https://www.os-templates.com/template-terms
+Author URI: #
+Licence URI: #template-terms
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -46,23 +46,23 @@ All templates that can be found within this site have copyright information and 
 
 Credit link(s) and copyright information must stay unmodified in all web pages that use our template(s).
 
-The default credit link that can be found in the (source code) template footer is: <p class="fl_right">Template by <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+The default credit link that can be found in the (source code) template footer is: <p class="fl_right">Template by <a href="#" title="Free Website Templates">OS Templates</a></p>
 
 The default footer link may be changed to:
 
     Code by OS Templates
-    <p class="fl_right">Code by <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_right">Code by <a href="#" title="Free Website Templates">OS Templates</a></p>
 
     Design by OS Templates
-    <p class="fl_right">Design by <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_right">Design by <a href="#" title="Free Website Templates">OS Templates</a></p>
 
     Thanks to OS Templates
-    <p class="fl_right">Thanks to <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_right">Thanks to <a href="#" title="Free Website Templates">OS Templates</a></p>
 
 For companies or individuals that wish to add their information to the template footer please feel free to modify the link as such:
 
     Website by YOURDETAILS & OS Templates
-    <p class="fl_right">Website by <a href="YOURURL">YOURDETAILS</a> & <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_right">Website by <a href="YOURURL">YOURDETAILS</a> & <a href="#" title="Free Website Templates">OS Templates</a></p>
 
 
 COPYRIGHT INFO & CREDIT LINKS
@@ -72,7 +72,7 @@ YOU ARE NOT PERMITTED TO REMOVE CREDIT LINKS AND/OR COPYRIGHT INFORMATION FROM T
 
 OS Templates DOES NOT offer paid link removals or paid copyright removals.
 
-All of the templates and digital work that can be found on https://www.os-templates.com/ have been filed globally with various Copyright Offices. If you misuse our digital work we will seek damages and you will be prosecuted.
+All of the templates and digital work that can be found on # have been filed globally with various Copyright Offices. If you misuse our digital work we will seek damages and you will be prosecuted.
 
 If credit links and/or copyright information are/is intentionally removed from our digital work, legal action will be taken against those doing so.
 
